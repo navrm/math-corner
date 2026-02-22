@@ -1,110 +1,18 @@
-Παρακάτω σου δίνω όλα τα βασικά αρχεία και τη δομή για να δημιουργήσεις πλήρως το project "Η Μαθηματική Γωνιά μας" στον υπολογιστή σου. Απλώς δημιούργησε έναν φάκελο `math-corner` και αντιγράψε τα περιεχόμενα ανάλογα.
-
----
-
-## 1️⃣ package.json
-
-```json
 {
   "name": "math-corner",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "three": "^0.154.0",
-    "@react-three/fiber": "^8.0.27",
-    "tailwindcss": "^3.3.3"
+    "react-dom": "^18.2.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "vite": "^5.2.0",
+    "@vitejs/plugin-react": "^3.1.0"
   }
 }
-```
-
-## 2️⃣ public/index.html
-
-```html
-<!DOCTYPE html>
-<html lang="el">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Η Μαθηματική Γωνιά μας</title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
-</html>
-```
-
-## 3️⃣ src/index.js
-
-```javascript
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
-```
-
-## 4️⃣ src/App.js
-
-```javascript
-import React from 'react';
-import Banner from './components/Banner';
-
-function App() {
-  return (
-    <div className="app">
-      <Banner />
-      <h1>Καλώς ήρθατε στην Μαθηματική Γωνιά μας!</h1>
-      {/* Μπορείς να προσθέσεις περισσότερα components εδώ */}
-    </div>
-  );
-}
-
-export default App;
-```
-
-## 5️⃣ src/components/Banner.js
-
-```javascript
-import React from 'react';
-
-function Banner() {
-  return (
-    <div className="banner">
-      <h2>Η Μαθηματική Γωνιά μας</h2>
-      <p>Εκεί όπου η λογική συναντά τη δημιουργία</p>
-    </div>
-  );
-}
-
-export default Banner;
-```
-
-## 6️⃣ src/index.css
-
-```css
-body { margin: 0; font-family: sans-serif; background-color: #f0f4f8; }
-.app { padding: 20px; }
-.banner { background-color: #6366f1; color: white; padding: 40px; border-radius: 20px; text-align: center; }
-```
-
-## 7️⃣ Φάκελοι για 3D και assets
-
-Δημιούργησε:
-
-```
-src/3d/     --> για 3D μοντέλα και animations
-src/assets/ --> για εικόνες, icons, backgrounds
-```
-
-Με αυτόν τον τρόπο έχεις όλα τα βασικά αρχεία του project πλήρως λειτουργικά και μπορείς να τα κατεβάσεις copy-paste σε έναν φάκελο `math-corner`. Αφού τελειώσεις, μπορείς να το τρέξεις με `npm install` και `npm start`, και να το ανεβάσεις στο GitHub ή στο Vercel.
